@@ -11,6 +11,11 @@ public class BootApplication {
 
     @RequestMapping("/")
     String index(){
+//        try {
+//            Thread.sleep(30000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         return "Hello Spring Boot";
     }
 

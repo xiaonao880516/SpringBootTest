@@ -20,6 +20,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public List<LoginUser> getUser(int id) throws Exception {
+        return userMapper.getUserById(id);
+    }
+
+    @Override
     public void deleteUser(int id) throws Exception {
         userMapper.deleteUser(id);
     }

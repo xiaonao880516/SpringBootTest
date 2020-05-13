@@ -11,13 +11,15 @@ import java.util.List;
 public interface UserMapper {
 
     //显示所有用户
-    public List<LoginUser> getUser() throws Exception;
+    List<LoginUser> getUser() throws Exception;
+
+    List<LoginUser> getUserById(int id) throws Exception;
 
     //根据id删除用户
-    public void deleteUser(int id) throws Exception;
+    void deleteUser(int id) throws Exception;
 
     //新增用户
-    public void addUser(LoginUser user) throws Exception;
+    void addUser(LoginUser user) throws Exception;
 
 }
 

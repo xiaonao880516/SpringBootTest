@@ -4,10 +4,13 @@
     <select id="getUser" resultType="com.samuel.springboot.entity.LoginUser">
         select * from service_login_admin
     </select>
+    <select id="getUserById" parameterType="Integer" resultType="com.samuel.springboot.entity.LoginUser">
+        select * from service_login_admin where id =#{id}
+    </select>
     <delete id="deleteUser" parameterType="Integer">
         delete from service_login_admin where id =#{id}
     </delete>
     <insert id="addUser" parameterType="com.samuel.springboot.entity.LoginUser">
-        insert into service_login_admin(id,username,password,real_name)values(#{id},#{name},#{password},#{real_name})
+        insert into service_login_admin(id, username, password, real_name, create_time, lastlogin_time, lastupdate_time)values(#{id}, #{username}, #{password}, #{real_name}, NOW(), NOW(), NOW())
     </insert>
 </mapper>

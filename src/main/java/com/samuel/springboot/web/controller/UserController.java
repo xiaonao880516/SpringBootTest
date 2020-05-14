@@ -29,15 +29,15 @@ public class UserController {
 
     //显示用户
     @RequestMapping("getJsonObject/{id}")
-    public String getJsonObject(@PathVariable int id) throws Exception {
+    public LoginUser getJsonObject(@PathVariable int id) throws Exception {
 //        return JSON.toJSONString(userService.getUser(id));
-//        return userService.getUser(id).get(0);
-        return "{\n" +
-                "\"id\": 38,\n" +
-                "\"password\": \"d210b7c1d167ec8ec682ace4ee85399b\",\n" +
-                "\"real_name\": \"管理员\",\n" +
-                "\"username\": \"admin\"\n" +
-                "}";
+        return userService.getUser(id).get(0);
+//        return "{\n" +
+//                "\"id\": 38,\n" +
+//                "\"password\": \"d210b7c1d167ec8ec682ace4ee85399b\",\n" +
+//                "\"real_name\": \"管理员\",\n" +
+//                "\"username\": \"admin\"\n" +
+//                "}";
     }
 
     //显示用户
